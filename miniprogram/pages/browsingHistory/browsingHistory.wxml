@@ -1,0 +1,4 @@
+<view class="browsingHistory">
+    <text class="browsingHistoryTitle">我的足迹</text>
+    <w-goodsList goodsList="{{browsingHistory}}"></w-goodsList>
+</view>

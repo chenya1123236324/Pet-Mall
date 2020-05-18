@@ -1,0 +1,22 @@
+<view class="release">
+    <view class="top">
+        <text class="title">发表评论</text>
+        <button size="mini" type="primary" bindtap = "send" disabled="{{isButton}}">发布</button>
+    </view>
+    <view class="main">
+        <textarea placeholder="这一刻你的想法..." bindblur="getValue"></textarea>
+    </view>
+    <view class="image-list">
+        <!-- 显示图片 -->
+        <block wx:for="{{images}}" wx:key="*this" wx:for-index="index" wx:for-item="item">
+            <view class="image-wrap">
+                <i class="iconfont icon-delete" bindtap="onDelImage" data-index="{{index}}"></i>
+                <image class="image" src="{{item}}" mode="aspectFill" bindtap="onPreviewImage" data-imgSrc="{{item}}"></image>
+            </view>
+        </block>
+        <!-- 选择图片 -->
+        <view class="image-wrap selectphoto" bindtap="onChooseImage" hidden="{{!selectPhoto}}">
+            <i class="iconfont icon-icon-test add"></i>
+        </view>
+    </view>
+</view>

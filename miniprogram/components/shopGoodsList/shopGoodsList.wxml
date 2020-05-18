@@ -1,0 +1,58 @@
+<view class="shopGoodsList">
+    <checkbox-group>
+        <checkbox-group class="group" bindchange="checkboxChange">
+            <block wx:for="{{newCarList}}" wx:key="index">
+                <view class="shopGoods">
+                    <label bindtap="goodsListCheck" data-brand="{{item.brand}}" data-checked="{{item.checked}}" class="checkbox-brand">
+                        <!-- 商品的店铺名分类 -->
+                        <checkbox value="{{index}}" checked="{{item.checked}}"></checkbox>
+                        <text class="brand">{{item.brand}}</text>
+                    </label>
+                    <!-- 店铺中的商品列表 -->
+                    <checkbox-group class="group" bindchange="checkboxChildChange">
+                        <block wx:for="{{item.list}}" wx:key="brand" wx:for-item="good" wx:for-index="goodIndex">
+                            <label bindtap="goodsCheck" data-id="{{good._id}}" data-brand="{{good.brand}}">
+                                <view class="good-main">
+                                    <checkbox style="margin-top:12vw" value="{{good._id}}" checked="{{good.checked}}" />
+                                    <view>
+                                        <image src="//{{good.imgSrc}}"></image>
+                                    </view>
+                                    <view class="good-main-2">
+                                        <text class="name">{{good.name}}</text>
+                                        <text class="price">￥{{good.price}}</text>
+                                        <view class="sum">
+                                            <button data-id="{{good._id}}" catchtap="sub">-</button>
+                                            <text>{{good.count}}</text>
+                                            <button data-id="{{good._id}}" catchtap="add">+</button>
+                                        </view>
+                                    </view>
+                                </view>
+                            </label>
+                        </block>
+                    </checkbox-group>
+                </view>
+            </block>
+        </checkbox-group>
+        <!-- 购买条 -->
+        <view class="goShopping" wx:if="{{isShopping}}">
+            <label bindtap="allGoods">
+                <checkbox checked="{{isCheckbox}}"></checkbox>
+                <text>全选</text>
+            </label>
+            <view class="settlement" wx:if="{{isGoShopping}}">
+                <text>合计:</text>
+                <text class="totalPrice">￥{{totalPrice}}</text>
+                <button bindtap="settlement">结算</button>
+            </view>
+            <view id="del" wx:else>
+                <view bindtap = "empty" class="empty">清空</view>
+                <view bindtap = "del" class="del">删除</view>
+            </view>
+        </view>
+        <!-- 没有商品列表数据时 -->
+        <view class="noList" wx:else bindtap = "goIndex">
+            <i class="iconfont icon-chat-gray-copy"></i>
+            <text>我饿了~~</text>
+        </view>
+    </checkbox-group>
+</view>

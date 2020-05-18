@@ -1,0 +1,102 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(251, 247, 247);
+}
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500rpx;
+  z-index: -1;
+}
+
+#index {
+  width: 90%;
+  margin: 0 auto;
+  /* background-color: aquamarine; */
+}
+
+#top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#top>text {
+  font-size: 50rpx;
+  font-weight: 900;
+  width: 120rpx;
+}
+
+#top>image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+  border-radius: 20px;
+  overflow: hidden;
+}
+swiper-item{
+  border-radius: 20px;
+}
+.bannerImg {
+  width: 100%;
+  height: 348rpx;
+  /* display: inline-block; */
+  border-radius: 20px;
+  overflow: hidden;
+}
+.classification{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.classification>view{
+  width: 20vw;
+  height: 20vw;
+  text-align: center;
+}
+.classification>view>image{
+  width: 15vw;
+  height: 15vw;
+  border-radius: 30%;
+  display: block;
+  margin: 0 auto;
+}
+.classification>view>text{
+  font-size: 30rpx;
+}
+/* 火爆商品 */
+.hotCommodity{
+  /* background-color: red; */
+  margin-top: 30rpx;
+  width: auto;
+  height: auto;
+}
+.hotCommodity>text{
+  color: #EE5533;
+  font-size: 60rpx;
+  font-weight: 800;
+}
+/* 浏览商品 */
+.randomGoodsList{
+  margin-top: 30rpx;
+}
+.randomGoodsList>text{
+  color: #ee5566;
+  font-size: 60rpx;
+  font-weight: 900;
+  padding: 20rpx 0;
+}
+/* 是否登录 */
+.login{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}

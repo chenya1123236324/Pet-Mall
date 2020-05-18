@@ -1,0 +1,12 @@
+<view class="personalCenter">
+    <view class="userInfo">
+        <image src="{{userInfo.img}}" mode="aspectFill" />
+        <view class="userNickName">
+            <text>{{userInfo.name}}</text>
+        </view>
+    </view>
+    <text class="title">发布的分享</text>
+    <view class="articleList">
+        <w-articleList bind:refreshPage="refreshPage" articleList="{{articleList}}"></w-articleList>
+    </view>
+</view>

@@ -1,0 +1,68 @@
+<view class="detail">
+    <view class="content">
+        <image src="//{{good.imgSrc}}" />
+        <view class="brand-price">
+            <text class="brand">{{good.brand}}</text>
+            <text class="price">￥{{good.price}}</text>
+        </view>
+        <view class="tianMao-name">
+            <text class="tianMao">天猫</text>
+            <text class="name">{{good.name}}</text>
+        </view>
+    </view>
+    <view class="activityList">
+        <view>
+            <view class="delivery">
+                <view class="name1">
+                    <text class="name1-1">发货</text>
+                    <text class="name1-2">
+                        <i class="iconfont icon-ditu"></i>
+                        <text>江苏南京 | 快递包邮</text>
+                    </text>
+                </view>
+                <text>月销10万+</text>
+            </view>
+            <view class="activity">
+                <view class="name1">
+                    <text class="name1-1">活动</text>
+                    <text class="name1-2">下单送私房红包最高99元</text>
+                </view>
+                <i class="iconfont icon-jiankuohaoyou"></i>
+            </view>
+        </view>
+        <view>
+            <view class="security">
+                <view class="name1">
+                    <text class="name1-1">保障</text>
+                    <text class="name1-2">假一赔四·破损包退·赠保价险·360质保</text>
+                </view>
+                <i class="iconfont icon-jiankuohaoyou"></i>
+            </view>
+            <view class="parameter">
+                <view class="name1">
+                    <text class="name1-1">参数</text>
+                    <text class="name1-2">生产日期 品牌...</text>
+                </view>
+                <i class="iconfont icon-jiankuohaoyou"></i>
+            </view>
+        </view>
+    </view>
+    <view class="end">
+        <view class="service">
+            <view>
+                <i class="iconfont icon-dianpu" style="color:red"></i>
+                <text>店铺</text>
+            </view>
+            <view>
+                <i class="iconfont icon-kefu"></i>
+                <text>客服</text>
+            </view>
+        </view>
+        <view>
+            <button data-good="{{good}}" bindtap="addCar">{{shoppingCart}}</button>
+        </view>
+    </view>
+    <view class="getUserInfo" wx:if="{{isShow}}">
+        <w-getUserInfo id="getUserInfo" bind:close="getUserInfo" class="buttonUserInfo"></w-getUserInfo>
+    </view>
+</view>

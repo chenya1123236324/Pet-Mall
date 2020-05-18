@@ -1,0 +1,13 @@
+<view class="hotCommodityList">
+    <block wx:for="{{hotCommodity}}" wx:key="index">
+        <view class="hotGoodsContent" id="{{item._id}}">
+            <image src="{{hotGoodsHttpUrl}}{{item.picpath}}"></image>
+            <text>{{item.pname}}</text>
+            <view>
+                <text style="color:red">￥{{item.price}}</text>
+                <text>已售{{item.sales}}</text>
+            </view>
+        </view>
+    </block>
+    <text class="more" bind:tap="goMoreHotGoods">加载更多</text>
+</view>

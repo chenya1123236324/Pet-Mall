@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "w-articleList":"/components/articleList/articleList"
+  },
+  "enablePullDownRefresh": true
+}

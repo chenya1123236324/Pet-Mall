@@ -1,0 +1,43 @@
+.getUserInfo{
+    width: 90%;
+    position: relative;
+    background-color: rgba(36, 174, 209, 0.753);
+}
+.close{
+    width: 30rpx;
+    height: 30rpx;
+    display: inline-block;
+    background-color: none;
+    position: absolute;
+    top: 0rpx;
+    right: -10rpx;
+    font-size: 30rpx;
+    font-weight: 900;
+    color: black;
+}
+.getUserInfo>view{
+    line-height: 90rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.getUserInfo>view>text{
+    color: white;
+    font-weight: 700;
+    font-size: 30rpx;
+    margin-left: 10rpx;
+}
+.getUserInfo>view>button{
+    display: inline-block;
+    line-height: 50rpx;
+    font-size: 18rpx;
+    text-align: center;
+    width: 100rpx;
+    height: 50rpx;
+    border: 4rpx solid #df9f2a;
+    border-radius: 10px;
+    color: #df9f2a;
+    position: absolute;
+    right: 34rpx;
+    top: 20rpx;
+}

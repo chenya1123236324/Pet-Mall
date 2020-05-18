@@ -1,0 +1,143 @@
+@import "../../app.wxss";
+.shopGoodsList {
+  width: 100%;
+}
+.shopGoods {
+  margin-bottom: 30rpx;
+  border: 3rpx solid #ccc;
+  background-color: white;
+  border-radius: 20rpx;
+  padding-bottom: 22rpx;
+}
+.checkbox-brand {
+  margin-top: -20rpx;
+}
+.brand {
+  font-size: 42rpx;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 30rpx;
+}
+.good-main {
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  /* text-align: center; */
+}
+image {
+  width: 31vw;
+  height: 31vw;
+}
+.good-main-2 {
+  position: relative;
+}
+.name {
+  font-weight: 700;
+  line-height: 50rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.price {
+  color: chocolate;
+  font-weight: 900;
+  font-size: 30rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.sum {
+  height: 40rpx;
+  line-height: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.sum > button {
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+/* 购买条样式 */
+.goShopping {
+  width: 90%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  background-color: rgb(175, 154, 125);
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.settlement {
+  display: flex;
+}
+.totalPrice {
+  color: red;
+  font-size: 34rpx;
+}
+.settlement > button {
+  width: 180rpx;
+  color: white;
+  background-color: coral;
+  border-radius: 20px;
+  margin-left: 20rpx;
+}
+#del {
+  width: 350rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.empty {
+  width: 160rpx;
+  height: 60rpx;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10rpx;
+  line-height: 60rpx;
+  color: rgb(230, 189, 10);
+  background-color: rgb(175, 154, 125);
+  border: 3rpx solid rgb(230, 189, 10);
+  border-radius: 20px;
+  margin-left: 20rpx;
+}
+.del {
+  width: 160rpx;
+  height: 60rpx;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10rpx;
+  line-height: 60rpx;
+  color: red;
+  background-color: rgb(175, 154, 125);
+  border: 3rpx solid red;
+  border-radius: 20px;
+}
+/* 没有购物车列表 */
+.noList {
+  width: 50%;
+  /* background-color: red; */
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 280rpx;
+}
+.noList > i {
+  font-size: 140rpx;
+  margin-bottom: 40rpx;
+}
+.noList > text {
+  font-size: 48rpx;
+}

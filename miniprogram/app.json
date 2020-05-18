@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/petPark/petPark",
+    "pages/shopCar/shopCar",
+    "pages/mine/mine",
+    "pages/moreHotGoodsList/goMoreHotGoods",
+    "pages/detailsPage/detailsPage",
+    "pages/classificationDetails/classificationDetails",
+    "pages/browsingHistory/browsingHistory",
+    "pages/release/release",
+    "pages/personalCenter/personalCenter"
+  ],
+  "window": {
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "宠物乐园",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#cccccc",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/icon/功能图标-09.png",
+        "selectedIconPath": "./static/icon/功能图标-13.png"
+      },
+      {
+        "pagePath": "pages/petPark/petPark",
+        "text": "宠物圈",
+        "iconPath": "./static/icon/功能图标-10.png",
+        "selectedIconPath": "./static/icon/功能图标-14.png"
+      },
+      {
+        "pagePath": "pages/shopCar/shopCar",
+        "text": "购物车",
+        "iconPath": "./static/icon/功能图标-11.png",
+        "selectedIconPath": "./static/icon/功能图标-15.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./static/icon/功能图标-12.png",
+        "selectedIconPath": "./static/icon/功能图标-16.png"
+      }
+    ]
+  }
+}

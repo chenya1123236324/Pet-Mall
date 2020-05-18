@@ -1,0 +1,13 @@
+<view id="shopCar">
+    <!-- 购物车 顶部 -->
+    <view class="top">
+        <text class="shopCar">购物车<text class="shopCarNum" wx:if="{{shopCarNum>0}}">({{shopCarNum}})</text></text>
+        <text class="management" bindtap = "management">{{management}}</text>
+    </view>
+    <!-- 当有商品时 购物车内容 -->
+    <view class="main">
+        <w-shopGoodsList id="shopGoodsList" capture-bindtap="management" bind:modifyManagement="getManagement" bind:getSum="getSum"></w-shopGoodsList>
+    </view>
+    <!-- 当没有有商品时 页面内容 -->
+    <view class="isNo"></view>
+</view>

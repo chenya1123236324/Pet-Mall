@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "w-getUserInfo":"/components/buttonUserInfo/buttonUserInfo",
+    "w-articleList":"/components/articleList/articleList"
+  },
+  "enablePullDownRefresh": true
+}

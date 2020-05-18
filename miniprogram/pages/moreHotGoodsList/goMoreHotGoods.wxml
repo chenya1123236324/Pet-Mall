@@ -1,0 +1,16 @@
+<view id="moreHotGoodsList">
+    <text class="title">火爆商品专区</text>
+    <view class="main">
+        <block wx:for="{{hotGoodsList}}" wx:key="index">
+            <view class="hotGood" id="{{item._id}}" wx:if="{{item.picpath}}">
+                <image src="{{hotGoodsHttpUrl}}{{item.picpath}}"></image>
+                <text>{{item.pname}}</text>
+                <view>
+                    <text style="color:red">￥{{item.price}}</text>
+                    <text>已售{{item.sales}}</text>
+                </view>
+            </view>
+        </block>
+    </view>
+    <text class="isShow" wx:if="{{isShow}}">没有更多了...</text>
+</view>

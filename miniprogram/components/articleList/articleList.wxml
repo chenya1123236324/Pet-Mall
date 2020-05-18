@@ -1,0 +1,30 @@
+<wxs src="../../utils/date.wxs" module="date"></wxs>
+<view class="articleList">
+    <block wx:for="{{articleList}}" wx:key="index" wx:for-index="index">
+        <view class="all" id="{{item._id}}" data-articleId="{{item._id}}" data-openId="{{item.openId}}">
+            <i class="iconfont icon-shanchu delIcon" data-id="{{item._id}}" data-fileId="{{item.img}}" wx:if="{{item.isDel}}" bindtap = "delArticle"></i>
+            <view class="userInfo">
+                <image bindtap = "goPersonalCenter" data-openId="{{item.openId}}" src="{{item.avatarUrl}}" />
+                <view>
+                    <text bindtap = "goPersonalCenter" data-openId="{{item.openId}}" class="userName">{{item.nickName}}</text>
+                    <text class="time">{{date.formatTime(item.showTime)}}</text>
+                </view>
+            </view>
+            <view class="main">
+                <view class="content">
+                    <text class="contentText">{{item.content}}</text>
+                    <view class="imgsListOne" wx:if="{{item.img.length>2}}">
+                        <block wx:for="{{item.img}}" wx:for-item="imgList" wx:for-index="imgIndex" wx:key="item">
+                            <image bindtap = "viewImg" src="{{imgList}}" mode="aspectFill" data-imgSrc="{{imgList}}" data-imgsList="{{item.img}}" />
+                        </block>
+                    </view>
+                    <view class="imgsListTow" wx:elif="{{item.img.length>0}}">
+                        <block wx:for="{{item.img}}" wx:for-item="imgList" wx:key="item">
+                            <image bindtap = "viewImg" src="{{imgList}}" mode="aspectFill" data-imgSrc="{{imgList}}" data-imgsList="{{item.img}}" />
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,28 @@
+.buttonUserInfo{
+    width: 300rpx;
+    height: 300rpx;
+    background-color:white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.buttonUserInfo>image{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    position: absolute;
+    top: -40rpx;
+    left: 100rpx;
+}
+.buttonUserInfo>view{
+    padding-top: 100rpx;
+    text-align: center;
+}
+.buttonUserInfo>view>text{
+    font-size: 40rpx;
+    font-weight: 900;
+}
+.close{
+    margin-top: 40rpx;
+    margin-right: 30rpx;
+}

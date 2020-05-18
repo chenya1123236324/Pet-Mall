@@ -1,0 +1,13 @@
+<view class="petPark">
+    <view class="top">
+        <text>宠物圈</text>
+        <i class="iconfont icon-jiahao" bindtap="goRelease"></i>
+    </view>
+    <view class="main">
+        <w-articleList articleList="{{articleList}}"></w-articleList>
+    </view>
+    <!-- 登录框 -->
+    <view class="getUserInfo" wx:if="{{isShow}}">
+        <w-getUserInfo id="getUserInfo" bind:close="getUserInfo" class="buttonUserInfo"></w-getUserInfo>
+    </view>
+</view>

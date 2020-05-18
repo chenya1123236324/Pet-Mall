@@ -1,0 +1,41 @@
+<image class="bg" src="../../images/index-bg.png"></image>
+<view id="index">
+	<!-- 顶部的 首页 和 搜索图标 -->
+	<view id="top">
+		<text>首页</text>
+		<image src="{{icon.search}}" mode="aspecFit" bindtap="search"></image>
+	</view>
+	<!-- 轮播图 -->
+	<view class="banner">
+		<swiper indicator-dots="true" indicator-color="#c4d2fe" indicator-active-color="#ffffff" autoplay="true">
+			<block wx:for="{{bannerList}}" wx:key="index">
+				<swiper-item>
+					<image class="bannerImg" mode="aspecFit" src="{{item.imgSrc}}" data-name="{{item.name}}" bindtap="bannerImg"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- 分类栏 -->
+	<view class="classification">
+		<block wx:for="{{classificationList}}" wx:key="index">
+			<view data-species="{{item.species}}" bind:tap="goClassificationDetails">
+				<image src="{{item.imgSrc}}" mode="scaleToFill"></image>
+				<text>{{item.name}}</text>
+			</view>
+		</block>
+	</view>
+	<!-- 火爆商品 -->
+	<view class="hotCommodity">
+		<text>火爆商品</text>
+		<w-hotCommodity hotCommodity="{{hotGoodsList}}"></w-hotCommodity>
+	</view>
+	<!-- 浏览商品 -->
+	<view class="randomGoodsList">
+		<text>猜你喜欢</text>
+		<w-goodsList goodsList="{{randomGoodsList}}"></w-goodsList>
+	</view>
+	<!-- 是否登录 -->
+	<view class="login">
+		<w-getUserInfo></w-getUserInfo>
+	</view>
+</view>

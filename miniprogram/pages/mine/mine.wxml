@@ -1,0 +1,21 @@
+<!-- <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">登录</button> -->
+<view class="mine">
+    <view class="userInfo">
+        <view class="userAvatarUrl"><open-data type="userAvatarUrl" /></view>
+        <view class="userNickName"><open-data type="userNickName" /></view>
+    </view>
+    <view class="user">
+        <block wx:for="{{functionsList}}" wx:key="index">
+            <view class="userMain">
+                <view >
+                    <i class="iconfont {{item.icon}}" style="color:{{item.color}};margin-right:30rpx"></i>
+                    <text>{{item.name}}</text>
+                </view>
+                <i class="iconfont icon-jiankuohaoyou" data-tabBar="{{item.tabBar}}" data-url="{{item.url}}" data-isid="{{item.isId}}" bind:tap="goPage"></i>
+            </view>
+        </block>
+    </view>
+    <view class="getUserInfo" wx:if="{{isShow}}">
+        <w-getUserInfo id="getUserInfo" bind:close="getUserInfo" class="buttonUserInfo"></w-getUserInfo>
+    </view>
+</view>

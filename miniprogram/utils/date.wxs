@@ -1,0 +1,29 @@
+/**
+ * 时间格式化工具
+ * 2020-05-18T01:51:01.813Z  ---> 2020-05-18 09:51:01
+ * 在别的页面引入
+ * <wxs src="../../utils/date.wxs" module="utils" ></wxs>
+ * 使用
+ * <text class="time">{{utils.formatTime(item.showTime)}}</text>
+ */
+var formatTime = function (date) {
+  var date = getDate(date)
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+  
+  return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+  }
+  
+  var formatNumber = function(n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+  }
+  
+  module.exports = {
+  formatTime: formatTime,
+  formatNumber: formatNumber
+  }

@@ -1,0 +1,7 @@
+<view class="getUserInfo" wx:if="{{isShow}}">
+    <text bindtap="close" size="mini" class="close">X</text>
+    <view>
+        <text>登录解锁更多功能..</text>
+        <button open-type="getUserInfo" size="mini" type="primary" bindgetuserinfo="onGetUserInfo">登录</button>
+    </view>
+</view>

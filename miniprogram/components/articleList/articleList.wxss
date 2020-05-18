@@ -1,0 +1,81 @@
+@import "../../app.wxss";
+.articleList {
+  height: 100%;
+  margin-top: 30rpx;
+}
+.all {
+  width: 100%;
+  background-color: white;
+  border-bottom: 2rpx solid rgb(206, 205, 205);
+  box-shadow: 5px 5px 10px #ccc;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+/* 删除图标 */
+.delIcon {
+  position: absolute;
+  font-size: 40rpx;
+  top: 4rpx;
+  right: 4rpx;
+}
+/* 用户信息 */
+.userInfo {
+  width: 100%;
+  height: 80rpx;
+  /* background-color: rgb(219, 214, 214); */
+  display: flex;
+}
+/* 用户头像 */
+.userInfo > image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.userInfo > view {
+  display: flex;
+  flex-direction: column;
+}
+/* 用户昵称 */
+.userInfo > view > .userName {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+/* 文章时间 */
+.userInfo > view > .time {
+  font-size: 20rpx;
+  color: rgb(93, 85, 85);
+}
+
+/* 文章内容 */
+.main {
+  width: 100%;
+  padding-top: 20rpx;
+}
+.main > .content {
+  width: 100%;
+}
+.main > .content > .contentText {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.main > .content > .imgsListOne {
+  width: 100%;
+}
+.main > .content > .imgsListOne > image {
+  width: 220rpx;
+  height: 220rpx;
+  margin: 3rpx;
+}
+.main > .content > .imgsListTow {
+  width: 100%;
+}
+.main > .content > .imgsListTow > image {
+  width: 330rpx;
+  margin: 3rpx;
+}

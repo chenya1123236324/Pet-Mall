@@ -1,0 +1,13 @@
+<view class="goodsList">
+    <block wx:for="{{goodsList}}" wx:key="index">
+        <view id="{{item._id}}" bindtap = "goDetailsPage">
+            <image src="//{{item.imgSrc}}"></image>
+            <text>{{item.name}}</text>
+            <view>
+                <text>￥{{item.price}}</text>
+                <text>{{item.species}}</text>
+            </view>
+        </view>
+    </block>
+    <text class="bottom">—————————这是底线————————</text>
+</view>

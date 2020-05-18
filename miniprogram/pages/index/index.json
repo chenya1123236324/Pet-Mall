@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "w-hotCommodity":"/components/hotCommodity/hotCommodity",
+    "w-goodsList":"/components/goodsList/goodsList",
+    "w-getUserInfo":"/components/getUserInfo/getUserInfo"
+  }
+}
